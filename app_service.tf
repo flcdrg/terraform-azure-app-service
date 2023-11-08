@@ -19,11 +19,6 @@ resource "azurerm_windows_web_app" "webapp" {
   site_config {
     minimum_tls_version = "1.2"
     ftps_state          = "FtpsOnly"
-
-    application_stack {
-      current_stack = "node"
-      node_version  = "~12" # "6.9.1" # Must be one of ~12, ~14, ~16, and ~18
-    }
   }
 
   app_settings = {
